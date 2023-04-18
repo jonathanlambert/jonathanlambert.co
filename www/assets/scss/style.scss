@@ -1,0 +1,133 @@
+// Bootstrap overdies varibles File
+@import "helpers/variable";
+// Default Bootstrap scss File no need to change
+@import "bootstrap/bootstrap.scss"; // Bootstrap v5.0.2
+// Custom Files
+@import "helpers/import.scss";
+@import "component/all.scss";
+
+body {
+    background: $white;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $black;
+    font-weight: $font-regular;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+}
+
+// Icons
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?o3s4r1');
+    src:  url('../fonts/icomoon.eot?o3s4r1#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?o3s4r1') format('truetype'),
+        url('../fonts/icomoon.woff?o3s4r1') format('woff'),
+        url('../fonts/icomoon.svg?o3s4r1#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+  
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    //speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-icon{
+    font-size: size(24);
+}
+  
+.icon-arrow-east:before {
+    content: "\e900";
+}
+.icon-arrow-west:before {
+    content: "\e901";
+}
+.icon-attachment:before {
+    content: "\e902";
+}
+.icon-bullet-point:before {
+    content: "\e903";
+}
+.icon-call:before {
+    content: "\e904";
+}
+.icon-close:before {
+    content: "\e905";
+}
+.icon-down-arrow:before {
+    content: "\e906";
+}
+.icon-dribbble:before {
+    content: "\e907";
+}
+.icon-instagram:before {
+    content: "\e908";
+}
+.icon-linkedin:before {
+    content: "\e909";
+}
+.icon-mail:before {
+    content: "\e90a";
+}
+.icon-menu:before {
+    content: "\e90b";
+}
+.icon-minimize:before {
+    content: "\e90c";
+}
+.icon-plus:before {
+    content: "\e90f";
+}
+.icon-skype:before {
+    content: "\e910";
+}  
+
+// Custom Scroll with CSS only Supported Browser Chrome, Safari and Firefox
+* {
+    scrollbar-color: $dark-gray transparent;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $dark-gray;
+    border-radius: $border-radius-6;
+}
+
+// Browser Text Selection Color
+::-moz-selection { /* Code for Firefox */
+    color: $white;
+    background: $black;
+}
+::selection {
+    color: $white;
+    background: $black;
+}

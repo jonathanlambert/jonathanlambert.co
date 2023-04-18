@@ -1,0 +1,158 @@
+@import "variable";
+@import "mixin";
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	margin-bottom: size(0);
+}
+/*Headings*/
+h1, .h1{
+	font-family: $font-family-base;
+	font-weight: $font-medium;
+	font-size:size(112); 
+	line-height:size(134);
+	letter-spacing: size(-0.32);
+	color:$black;
+	@include media(down, $breakpoint-xl) {
+		font-size:size(80); 
+		line-height:size(100);
+	}
+	@include media(down, $breakpoint-md) {
+		font-size:size(40); 
+		line-height:size(60);
+	}
+}
+h2, .h2 { 
+	font-family: $font-family-base;
+	font-weight: $font-medium;
+	font-size:size(80); 
+	line-height:size(112);
+	letter-spacing: size(-0.32);
+	color:$black;
+	@include media(down, $breakpoint-xl) {
+		font-size:size(40); 
+		line-height:size(60);
+	}
+	@include media(down, $breakpoint-md) {
+		font-size:size(32); 
+		line-height:size(52);
+	}
+}
+h3, .h3 { 
+	font-family: $font-family-base;
+	font-weight: $font-medium;
+	font-size:size(32); 
+	line-height:size(52);
+	color:$black;
+	@include media(down, $breakpoint-xl) {
+		font-size:size(24); 
+		line-height:size(36);
+	}
+}
+h4, .h4 { 
+	font-family: $font-family-base;
+	font-weight: $font-semibold;
+	font-size:size(24); 
+	line-height:size(42);
+	color:$black;
+	@include media(down, $breakpoint-xl) {
+		font-size:size(20); 
+		line-height:size(32);
+	}
+}
+h5, .h5 { 
+	font-family: $font-family-base;
+	font-weight: $font-semibold;
+	font-size:size(20); 
+	line-height:size(36);
+	color:$black;
+	@include media(down, $breakpoint-xl) {
+		font-size:size(16); 
+		line-height:size(26);
+	}
+}
+h6, .h6 { 
+	font-family: $font-family-base;
+	font-weight: $font-semibold;
+	font-size: size(16);
+	line-height: size(28);
+	color:$black;
+	@include media(down, $breakpoint-xl) {
+		font-size:size(16); 
+		line-height:size(26);
+	}
+}
+
+p{
+	font-family: $font-family-base;
+	font-weight: $font-regular;
+	font-size: size(24);
+	line-height: size(42);
+	color:$black;
+	margin-bottom: size(32);
+	@include media(down, $breakpoint-xl) {
+		font-size:size(20); 
+		line-height:size(32);
+		margin-bottom: size(24);
+	}
+	@include media(down, $breakpoint-md) {
+		font-size:size(16); 
+		line-height:size(28);
+		margin-bottom: size(16);
+	}
+}
+
+.p-large{
+	font-family: $font-family-base;
+	font-weight: $font-regular;
+	font-size: size(32);
+	line-height: size(52);
+	color:$black;
+	@include media(down, $breakpoint-xl) {
+		font-size:size(24); 
+		line-height:size(42);
+	}
+	@include media(down, $breakpoint-md) {
+		font-size:size(20); 
+		line-height:size(36);
+	}
+}
+
+.p-small{
+	font-family: $font-family-base;
+	font-weight: $font-regular;
+	font-size: size(20);
+	line-height: size(36);
+	color:$black;
+	@include media(down, $breakpoint-xl) {
+		font-size:size(16); 
+		line-height:size(26);
+	}
+}
+.p-extra-small{
+	font-family: $font-family-base;
+	font-weight: $font-regular;
+	font-size: size(16);
+	line-height: size(28);
+	color:$black;
+	@include media(down, $breakpoint-xl) {
+		font-size:size(14); 
+		line-height:size(24);
+	}
+}
+
+a {
+    color: $black;
+	text-decoration: none;
+	@include Transition(all 0.3s ease-in-out);
+    &:hover {
+        text-decoration: none;
+        color: darken($black, 10);
+        outline: none;
+    }
+}
+
+ul, li {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}

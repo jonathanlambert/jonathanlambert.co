@@ -1,0 +1,184 @@
+.services-section{
+    &:nth-child(even){
+        .row{
+            flex-direction: row-reverse;
+        }
+        .content-box{
+            padding-right: size(112);
+            @include media(down, $breakpoint-xl) {
+                padding-right: size(20);
+            }
+            @include media(down, $breakpoint-lg) {
+                padding-right: size(0);
+            }
+        }
+    }
+    &:nth-child(odd){
+        .content-box{
+            padding-left: size(112);
+            @include media(down, $breakpoint-xl) {
+                padding-left: size(20);
+            }
+            @include media(down, $breakpoint-lg) {
+                padding-left: size(0);
+            }
+        }
+    }
+    .service-title{
+        text-align: center;
+        @include media(down, $breakpoint-lg) {
+            text-align: left;
+        }
+        h2{
+            font-family: $font-family-base;
+            font-weight: $font-medium;
+            font-size:size(112); 
+            line-height:size(134);
+            letter-spacing: size(-0.32);
+            color:$black;
+            @include media(down, $breakpoint-xl) {
+                font-size:size(80); 
+                line-height:size(100);
+            }
+            @include media(down, $breakpoint-lg) {
+                font-size:size(60); 
+                line-height:size(80);
+            }
+            @include media(down, $breakpoint-md) {
+                font-size:size(32); 
+                line-height:size(52);
+            }
+        }
+    }
+    .img-box{
+        img{
+            width: 100%;
+        }
+    }
+    .content-box{
+        @include media(down, $breakpoint-lg) {
+            margin-top: size(24);
+        }
+        .p-small{
+            color: $dark-gray;
+            margin-bottom: size(24);
+            @include media(down, $breakpoint-lg) {
+                display: none;
+            }
+        }
+        ul{
+            @include media(down, $breakpoint-md) {
+                margin-top: size(24);
+            }
+            li{
+                font-weight: $font-regular;
+                font-size: size(20);
+                line-height: size(36);
+                color:$black;
+                display: flex;
+                align-items: center;
+                margin-bottom: size(12);
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                @include media(down, $breakpoint-xl) {
+                    font-size:size(16); 
+                    line-height:size(26);
+                }
+                &:before{
+                    content: "\e903";
+                    font-family: 'icomoon' !important;
+                    font-size: size(24);
+                    color:$black;
+                    margin-right: size(16);
+
+                }
+            }
+        }
+    }
+    .button-box{
+        margin-top: size(40);
+        @include media(down, $breakpoint-lg) {
+            margin-top: size(24);
+        }
+    }
+}
+
+.benefits-section{
+    .benefit-box{
+        padding-right: size(224);
+        @include media(down, $breakpoint-xl) {
+            padding-right: size(85);
+        }
+        @include media(down, $breakpoint-lg) {
+            padding-right: 0;
+        }
+        .img-box{
+            margin-bottom: size(40);
+            @include media(down, $breakpoint-md) {
+                margin-bottom: size(24);
+            }
+            img{
+                @include media(down, $breakpoint-md) {
+                    width: 120px;
+                }  
+            }
+        }
+        h3{
+            margin-bottom: size(24);
+            @include media(down, $breakpoint-md) {
+                margin-bottom: size(16);
+            }
+        }
+    }
+}
+.faqs-section{
+    .img-box{
+        text-align: center;
+        @include media(down, $breakpoint-lg) {
+            margin-bottom: size(40);
+        }
+        @include media(down, $breakpoint-md) {
+            margin-bottom: size(24);
+        }
+    }
+}
+.faq-accordion{
+    .accordion-item{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid $border-color;
+        border-radius: 0;
+    }
+    .accordion-header{
+        display: flex;
+        align-items: flex-start;
+        cursor: pointer;
+        padding: size(32) 0;
+        @include media(down, $breakpoint-md) {
+            padding: size(16) 0;
+        }
+        &::before{
+            content: "\e90f";
+            font-family: 'icomoon' !important;
+            font-size: size(24);
+            line-height: size(36);
+            color:$black;
+            margin-right: size(24);
+            @include media(down, $breakpoint-md) {
+                line-height: size(26);
+                margin-right: size(16);
+            }
+        }
+        &:not(.collapsed)::before{
+            content: "\e90c";
+        }
+    }
+    .accordion-body{
+        padding: 0 0 0 size(48);
+        @include media(down, $breakpoint-md) {
+            padding: 0 0 0 size(40);
+        }
+    }
+}

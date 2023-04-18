@@ -1,0 +1,32 @@
+.about-counter-section{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1152px;
+        li{
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: 25%;
+            padding: 0 size(16);
+            @include media(down, $breakpoint-md) {
+                width: 100%;
+                padding: 0 0 size(40) 0;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+            }
+            h2{
+                margin-bottom: 8px;
+            }
+            p{
+                margin-bottom: 0;
+            }
+            .about-count::after{
+                content: "+";
+                display: inline-block;
+            }
+        }
+    }
+}
